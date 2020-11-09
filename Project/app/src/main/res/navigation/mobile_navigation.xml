@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_about">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.SamsungProject.SamsungProject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.SamsungProject.SamsungProject.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_players"
+        android:name="com.SamsungProject.SamsungProject.ui.players.PlayersFragment"
+        android:label="Игроки"
+        tools:layout="@layout/players_fragment" />
+    <fragment
+        android:id="@+id/nav_tournaments"
+        android:name="com.SamsungProject.SamsungProject.ui.tournaments.TournamentsFragment"
+        android:label="Турниры"
+        tools:layout="@layout/tournaments_fragment" />
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.SamsungProject.SamsungProject.ui.chats.ChatRoomFragment"
+        android:label="Чат"
+        tools:layout="@layout/сhatroom_fragment1" />
+    <fragment
+        android:id="@+id/nav_organizations"
+        android:name="com.SamsungProject.SamsungProject.ui.organizations.OrganizationsFragment"
+        android:label="Организации"
+        tools:layout="@layout/organizations_fragment" />
+    <fragment
+        android:id="@+id/nav_rating"
+        android:name="com.SamsungProject.SamsungProject.ui.rating.RatingFragment"
+        android:label="Рейтинг"
+        tools:layout="@layout/rating_fragment" />
+    <fragment
+        android:id="@+id/nav_sendInfo"
+        android:name="com.SamsungProject.SamsungProject.ui.sendInfo.SendInfoFragment"
+        android:label="Информация"
+        tools:layout="@layout/send_info_fragment" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.SamsungProject.SamsungProject.ui.about.AboutFragment"
+        android:label="О программе"
+        tools:layout="@layout/about_fragment"/>
+    <action android:id="@+id/action_global_nav_about" app:destination="@id/nav_about" />
+    <action android:id="@+id/action_global_nav_about2" app:destination="@id/nav_about" />
+    <action android:id="@+id/action_global_nav_about3" app:destination="@id/nav_about" />
+    <action android:id="@+id/action_global_nav_chats" app:destination="@id/nav_chats" />
+</navigation>

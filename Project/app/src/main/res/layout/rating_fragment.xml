@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rating"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.rating.RatingFragment">
+
+    <ListView
+        android:id='@+id/ratingListView'
+        android:layout_width="408dp"
+        android:layout_height="691dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/ratingfiltersTV"
+        app:layout_constraintEnd_toStartOf="@+id/ratingfiltersTV"
+        app:layout_constraintStart_toStartOf="@+id/ratingfiltersTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+
+        android:id="@+id/ratingfiltersTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:text="Фильтры"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/convertButton"
+        app:layout_constraintTop_toBottomOf="@+id/ratingListView" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:text="Конвертировать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ratingfiltersTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ratingfiltersTV" />
+
+    <FrameLayout
+        android:id="@+id/ratingframe"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ratingfiltersTV"
+        app:layout_constraintStart_toStartOf="@+id/ratingfiltersTV"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

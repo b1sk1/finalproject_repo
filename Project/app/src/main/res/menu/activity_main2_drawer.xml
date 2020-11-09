@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_players"
+            android:icon="@drawable/controllericon"
+            android:title="Игроки" />
+        <item
+            android:id="@+id/nav_tournaments"
+            android:icon="@drawable/cupicon2"
+            android:title="Турниры" />
+        <item
+            android:id="@+id/nav_chats"
+            android:icon="@drawable/playericon"
+            android:title="Чаты" />
+        <item
+            android:id="@+id/nav_organizations"
+            android:icon="@drawable/playericon"
+            android:title="Организации" />
+        <item
+            android:id="@+id/nav_rating"
+            android:icon="@drawable/crownicon"
+            android:title="Рейтинг" />
+        <item
+            android:id="@+id/nav_sendInfo"
+            android:icon="@drawable/controllericon"
+            android:title="Отправить информацию о предстоящем соревновании" />
+
+    </group>
+    <item android:title="Дополнительно">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/abouticon"
+                    android:title="О программе" />
+
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
